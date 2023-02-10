@@ -1,0 +1,93 @@
+@import 'variables';
+
+html,
+body {
+  hyphens: none;
+  font-family: 'Open Sans';
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body.overlay {
+  overflow: hidden;
+}
+
+html,
+body {
+  font-size: $ledgy-font-size;
+  line-height: $line-height-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Museo Sans Rounded';
+  font-weight: normal;
+  hyphens: auto;
+}
+
+small {
+  font-size: $ledgy-font-size / 1.2;
+}
+
+h1 {
+  font-size: $h1-font-size * 0.9;
+  hyphens: none;
+  @include media-breakpoint-up(md) {
+    font-size: $h1-font-size;
+  }
+}
+
+h2 {
+  font-size: $h2-font-size * 0.9;
+  @include media-breakpoint-up(md) {
+    font-size: $h2-font-size;
+    line-height: 2.75rem;
+  }
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+a {
+  text-decoration: none !important;
+  color: $energetic-blue;
+  transition: 300ms;
+  &:hover {
+    color: $deep-blue;
+    transition: 300ms;
+  }
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}

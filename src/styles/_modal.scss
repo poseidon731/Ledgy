@@ -1,0 +1,81 @@
+.modal-page {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: $zindex-popup;
+}
+
+.modal-custom {
+  position: relative;
+  width: 90vw;
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  &.md {
+    @include media-breakpoint-up(sm) {
+      width: 500px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 550px;
+    }
+  }
+  &.lg {
+    @include media-breakpoint-up(sm) {
+      width: 700px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 800px;
+    }
+  }
+  &.transparent {
+    background: transparent;
+    border-radius: $border-radius;
+    box-shadow: none;
+  }
+  & > .modal-header-custom  {
+    border-radius: $border-radius $border-radius 0 0;
+  }
+}
+
+.modal-close {
+  font-size: 24px;
+  padding: 15px !important;
+  line-height: 13px;
+  border: none;
+  border-radius: 50%;
+  color: $white !important;
+  background-color: $deep-blue !important;
+  &.transparent {
+    color: $gray-600 !important;
+    background-color: transparent !important;
+    z-index: $zindex-popup-toggler;
+    position: absolute;
+    top: -3rem;
+    right: -1rem;
+  }
+  &:hover {
+    color: $gray-700 !important;
+    background-color: $gray-100 !important;
+  }
+}
+
+.modal-transition-enter {
+  opacity: 0;
+}
+.modal-transition-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+}
+.modal-transition-exit {
+  opacity: 1;
+}
+.modal-transition-exit-active {
+  opacity: 0;;
+  transition: opacity 400ms ease-in;
+}

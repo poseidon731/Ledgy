@@ -1,0 +1,191 @@
+.text-sm {
+  font-size: $ledgy-font-size / 1.2;
+}
+
+.text-lg {
+  font-size: $ledgy-font-size * 1.12;
+}
+
+.text-xl {
+  font-size: $ledgy-font-size * 1.25;
+}
+
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
+.line-height-lg {
+  line-height: 2.2rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.min-width-110px {
+  min-width: 110px;
+}
+
+.min-width-120px {
+  min-width: 120px;
+}
+
+.height-42px {
+  height: 42px !important;
+}
+
+.hover-brigthen:hover {
+  color: $energetic-blue;
+  filter: brightness(120%);
+}
+
+.position-absolute-top-center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.will-change-unset {
+  will-change: unset !important;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.hover-translateY {
+  transition: 200ms;
+  &:hover {
+    transform: translateY(-2px);
+    transition: 200ms;
+  }
+}
+
+$aspect-ratio: calc(16 / 9);
+@mixin calculate-height($width) {
+  height: calc(#{$width} / #{$aspect-ratio});
+}
+$mobile-width: 90vw;
+$default-width: 700px;
+$small-width: 560px;
+
+.embed {
+  width: $mobile-width;
+  @include calculate-height($mobile-width);
+  &-default {
+    @include media-breakpoint-up(md) {
+      width: $default-width;
+      @include calculate-height($default-width);
+    }
+  }
+  &-small {
+    @include media-breakpoint-up(md) {
+      width: $small-width;
+      @include calculate-height($small-width);
+    }
+  }
+}
+
+.circle-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: $deep-blue;
+  color: $gray-100;
+}
+
+.container-small {
+  max-width: 832.5px;
+}
+
+.row-small {
+  max-width: 832.5px;
+}
+
+.width-fit-content {
+  width: fit-content;
+}
+
+.custom-container {
+  @include media-breakpoint-up(lg) {
+    max-width: 1500px;
+  }
+}
+
+@keyframes swinging {
+  from {
+    transform: translateX(0px);
+  }
+  70% {
+    transform: translateX(5px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.swinging {
+  animation-name: swinging;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.loader-banner {
+  height: 100vh;
+  svg {
+    width: 4rem;
+    animation: rotation 2s infinite linear;
+  }
+}
+
+.spin {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.z-index-base {
+  z-index: $zindex-base;
+}
+
+.z-index-background {
+  z-index: 0;
+}
+
+.z-index-deco {
+  z-index: $zindex-deco-shape;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.card-border-style {
+  border-radius: $border-radius-wide;
+  box-shadow: $box-shadow-wide;
+}

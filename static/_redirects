@@ -1,0 +1,13 @@
+https://ledgy.netlify.com/* https://ledgy.com/:splat 301!
+/  /de/  302  Language=de
+/  /fr/  302  Language=fr
+
+/verify-signature https://support.ledgy.com/how-to-verify-the-validity-of-a-signature
+
+/psop/ utm_source=:utm_source /employee-participation-plan-templates/?utm_source=:utm_source 301
+/submit/6881367/* https://api.hsforms.com/submissions/v3/integration/submit/6881367/:splat 200
+/engage/* https://api.mixpanel.com/:splat 200
+/track/* https://api.mixpanel.com/:splat 200
+/signup/* /demo/:splat 301
+/career/ /jobs/ 301
+/partner/* /partnership/ 200

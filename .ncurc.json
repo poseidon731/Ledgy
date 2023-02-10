@@ -1,0 +1,3 @@
+{
+  "reject": "eslint-config-airbnb,eslint,babel-eslint,gatsby"
+}

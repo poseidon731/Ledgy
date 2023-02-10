@@ -1,0 +1,22 @@
+{
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noEmit": true,
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "react",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "allowJs": true,
+    "lib": [
+      "es2019",
+      "dom"
+    ],
+    "allowSyntheticDefaultImports": true,
+  },
+}
